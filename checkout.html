@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stripe Test Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Checkout</h1>
+      <p>Web Development Masterclass</p>
+      <p>$49.00 USD</p>
+      <button class="button" id="payBtn">Pay with Stripe (Test)</button>
+    </div>
+  </div>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="app.js"></script>
+
+  <script>
+    // Replace with your own Publishable Key
+    const stripe = Stripe("pk_test_51TVlvJIP6QMry68kHnHPI5jQ7OZN8bsfkGg4I9u1YqdhicrqTB45YukF5lkq9KuKrNOQlLmUpaTUJajdt6D5cuDb001y4hbEfO");
+
+    document.getElementById("payBtn").addEventListener("click", async () => {
+      // For practice only: simulate a successful payment
+      alert("Simulating successful Stripe payment in Test Mode.");
+      purchaseCourse("web-course");
+    });
+  </script>
+</body>
+</html>

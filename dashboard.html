@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Student Dashboard</h1>
+      <p>My Courses:</p>
+      <a class="button" href="lesson.html">Open Course</a>
+      <br><br>
+      <button class="button" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    requireLogin();
+  </script>
+</body>
+</html>

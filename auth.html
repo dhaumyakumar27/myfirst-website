@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Register</h1>
+      <input id="name" placeholder="Full Name">
+      <input id="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+      <button class="button" onclick="doRegister()">Create Account</button>
+
+      <hr>
+
+      <h2>Login</h2>
+      <input id="loginEmail" placeholder="Email">
+      <input id="loginPassword" type="password" placeholder="Password">
+      <button class="button" onclick="doLogin()">Login</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    function doRegister() {
+      if (register(
+        document.getElementById('name').value,
+        document.getElementById('email').value,
+        document.getElementById('password').value
+      )) {
+        location.href = 'checkout.html';
+      }
+    }
+
+    function doLogin() {
+      if (login(
+        document.getElementById('loginEmail').value,
+        document.getElementById('loginPassword').value
+      )) {
+        location.href = 'checkout.html';
+      }
+    }
+  </script>
+</body>
+</html>
